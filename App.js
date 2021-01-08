@@ -1,11 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import {
+  StyleSheet,
+  Text,
+  Image,
+  View,
+  TouchableWithoutFeedback,
+} from "react-native";
 
 export default function App() {
+  const handlePress = () => {};
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text onPress={handlePress}>Yellow world.... </Text>
+
+      <Image
+        source={{
+          width: 300,
+          height: 300,
+          uri: "https://picsum.photos/200/300",
+        }}
+      />
       <StatusBar style="auto" />
     </View>
   );
@@ -14,8 +29,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
